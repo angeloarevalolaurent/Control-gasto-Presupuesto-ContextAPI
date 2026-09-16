@@ -25,4 +25,6 @@ export type BudgetActions =
                 budget: action.payload.budget
             }
         }
+
+        return state
     }
