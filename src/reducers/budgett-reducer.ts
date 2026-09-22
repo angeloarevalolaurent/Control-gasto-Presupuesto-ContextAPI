@@ -64,7 +64,8 @@ export type BudgetActions =
             const expense = createExpense(action.payload.expense)
             return{
                 ...state,
-                expenses: [...state.expenses, expense]
+                expenses: [...state.expenses, expense],
+                modal: false
             }
         }
         return state

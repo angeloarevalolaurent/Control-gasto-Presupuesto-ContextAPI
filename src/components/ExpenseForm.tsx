@@ -53,7 +53,6 @@ export const ExpenseForm = () => {
             return
         }
 
-
         dispatch({type:'add-expense', payload:{expense}})
         
     }
