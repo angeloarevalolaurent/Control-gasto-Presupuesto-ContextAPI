@@ -10,6 +10,7 @@ type ExpenseDetailProps = {
 
 export const ExpenseDetail = ({expense}: ExpenseDetailProps) => {
 
+
     const categoryInfo = useMemo(() =>categories.filter(cat => cat.id === expense.category)[0],[expense])
 
   return (
@@ -17,9 +18,9 @@ export const ExpenseDetail = ({expense}: ExpenseDetailProps) => {
         
         <div>
             <img src={`/icono_${categoryInfo.icon}.svg`} alt="Imagen de Categoría" className="w-20"/>
-
         </div>
-        <div className="flex-1 space-y-2">
+        
+        <div className="flex-1 space-y-3">
             <p className="text-sm text-slate-500 uppercase font-bold">{categoryInfo.name}</p>
             <p>{expense.expenseName}</p>
             <p className="text-slate-600 text-sm">{formatDate(expense.date!.toString())}</p>
