@@ -86,7 +86,8 @@ export type BudgetActions =
 
             return{
                 ...state,
-                editingId: action.payload.id
+                editingId: action.payload.id,
+                modal: true
             }
         }
         return state

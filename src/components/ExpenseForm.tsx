@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { categories } from "../data/categories"
 import DatePicker from 'react-date-picker';
@@ -25,7 +25,14 @@ export const ExpenseForm = () => {
 
     const [error, setError] = useState('')
 
-    const {dispatch} = useBudget()
+    const {state, dispatch} = useBudget()
+
+    useEffect(()=>{
+        if (state.editingId) {
+            const editingExpense = state.expenses.filter(editExpense => editExpense.id === state.editingId)[0]
+            setExpense(editingExpense)
+        }
+    },[state.editingId])
 
     const handleChange = ( e: React.ChangeEvent<HTMLInputElement|HTMLSelectElement>) =>{
         const {name, value} = e.target
