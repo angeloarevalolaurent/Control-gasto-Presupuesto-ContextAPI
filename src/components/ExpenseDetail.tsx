@@ -30,9 +30,7 @@ export const ExpenseDetail = ({expense}: ExpenseDetailProps) => {
 const leadingActions = () => (
     <LeadingActions>
         <SwipeAction
-            onClick={() => {
-                // Aquí irá la lógica para abrir el modal con los datos para editar
-            }}
+            onClick={() => dispatch({type:'get-expense-by-id', payload:{id: expense.id}})}
         >
             Actualizar
         </SwipeAction>
