@@ -7,7 +7,7 @@ import { AmountDisplay } from './AmountDisplay';
 
 
 export const BudgetTracker = () => {
-    const {state, totalExpenses, remainingBudget} = useBudget()
+    const {state,dispatch ,totalExpenses, remainingBudget} = useBudget()
     
     const procentage = +((totalExpenses / state.budget)*100).toFixed(2)
    
@@ -30,6 +30,7 @@ export const BudgetTracker = () => {
 
         <div className="flex flex-col justify-center items-center gap-8">
             <button
+                    onClick={()=> dispatch({type:'reset-app'})}
                     type="button"
                     className="bg-pink-600 w-full p-2 text-white uppercase font-bold rounded-lg"
             >
