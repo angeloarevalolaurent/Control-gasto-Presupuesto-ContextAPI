@@ -58,7 +58,7 @@ const trailingActions = () => (
             
         >
 
-            <div className="bg-white border-2 border-gray-200 p-10 shadow-lg w-full flex gap-5 items-center">
+            <div className="bg-white shadow-lg border-b border-gray-200 p-5 w-full flex gap-5 items-center">
                 
                 <div>
                     <img src={`/icono_${categoryInfo.icon}.svg`} alt="Imagen de Categoría" className="w-20"/>
