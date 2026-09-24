@@ -23,7 +23,7 @@ export const BudgetProvider = ({children}:BudgetProviderProps) => {
                 state,
                 dispatch
             }}
-        
+         
         >
             {children}
         </BudgetContext.Provider>
